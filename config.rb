@@ -45,14 +45,16 @@ activate :livereload
 #   end
 # end
 
-
 ###
 # Assets
 ###
 
-set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
+set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
+set :fonts_dir, 'assets/fonts'
+
+sprockets.append_path File.join "#{root}", "bower_components"
 
 # Build-specific configuration
 configure :build do

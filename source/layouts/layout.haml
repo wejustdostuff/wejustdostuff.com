@@ -11,7 +11,7 @@
     %title= page_title
     //= javascript_include_tag "vendor/modernizr-2.6.1.min"
     = stylesheet_link_tag "normalize", "all"
-    = javascript_include_tag  "all"
+    = javascript_include_tag  "modernizr", "all"
 
   %body{:class => page_classes}
     = yield
