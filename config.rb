@@ -1,4 +1,11 @@
 ###
+# Settings
+###
+
+set :site_name, "We Just Do Stuff"
+set :site_description, "Edit your config.rb to set the global description."
+
+###
 # Compass
 ###
 
@@ -14,7 +21,7 @@
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page "/404.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout

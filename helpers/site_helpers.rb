@@ -1,20 +1,19 @@
 module SiteHelpers
 
   def page_title
-    title = "We Just Do Stuff"
     if data.page.title
-      title =  data.page.title + " | " + title
+      data.page.title + " | " + settings.site_name
+    else
+      settings.site_title
     end
-    title
   end
 
   def page_description
     if data.page.description
-      description = data.page.description
+      data.page.description
     else
-      description = "Set your site description in /helpers/site_helpers.rb"
+      settings.site_description
     end
-    description
   end
 
 end
