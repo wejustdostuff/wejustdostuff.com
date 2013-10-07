@@ -1,49 +1,24 @@
-//= require normalize-css/normalize.css
 
-body
-  background: #d4d4d4 url("../img/background.png")
-  text-align: center
-  font-family: sans-serif
+// Bootstrap Core variables and mixins
+@import sass-bootstrap/lib/variables.scss
+@import sass-bootstrap/lib/mixins.scss
 
-h1
-  color: rgba(0, 0, 0, 0.3)
-  font-weight: bold
-  font-size: 32px
-  letter-spacing: -1px
-  text-transform: uppercase
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
-  background: url("../img/middleman.png") no-repeat center 100px
-  padding: 350px 0 10px
-  margin: 0
+// Bootstrap Reset
+@import sass-bootstrap/lib/normalize.scss
+@import sass-bootstrap/lib/print.scss
 
-.doc
-  font-size: 14px
-  margin: 0
-  &:before, &:after
-    opacity: .2
-    padding: 6px
-    font-style: normal
-    position: relative
-    content: "•"
-  a
-    color: rgba(0, 0, 0, 0.3)
-    &:hover
-      color: #666
+// Bootstrap Core CSS
+@import sass-bootstrap/lib/scaffolding.scss
+@import sass-bootstrap/lib/grid.scss
+@import sass-bootstrap/lib/navbar.scss
+@import sass-bootstrap/lib/modals.scss
+@import sass-bootstrap/lib/component-animations.scss
 
-.welcome
-  -webkit-animation-name: welcome
-  -webkit-animation-duration: .9s
 
-@-webkit-keyframes welcome
-  from
-    -webkit-transform: scale(0)
-    opacity: 0
-  50%
-    -webkit-transform: scale(0)
-    opacity: 0
-  82.5%
-    -webkit-transform: scale(1.03)
-    -webkit-animation-timing-function: ease-out
-    opacity: 1
-  to
-    -webkit-transform: scale(1)
+// Site
+@import variables
+@import mixins
+@import fonts
+@import cssowl
+@import sprite
+@import layout

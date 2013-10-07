@@ -1,0 +1,282 @@
+
+/* ---- global -------------------------------------------
+
+
+body
+  @include fontRegular
+  font-size: $fontSizeBase
+  background: $colorBg
+
+a
+  @include transition
+  outline: none
+  color: $colorFontDefault
+  text-decoration: underline
+  &:active
+    outline: none
+  &:focus
+    -moz-outline-style: none
+  &:hover
+    color: $colorFontGrey
+
+\:-moz-any-link:focus
+  outline: none
+
+                 
+h1, h2, h3, h4
+  @include fontLight
+  
+input, button
+  @include roundedBox($cornerRaduis)
+  box-shadow: none
+  height: 34px
+  padding: 0 10px
+  border: none
+
+
+
+
+/* ---- layout -------------------------------------------  
+
+
+/* ---- header
+
+header
+  background: $colorLightBg
+  height: 70px
+  width: 100%
+  border-bottom: 1px solid $colorBorder !important
+
+  .logo
+    font-size: $fontSizeLogo
+    color: $colorFontDefault
+
+    &.color1
+      color: $colorGradient11
+      .iconstroke
+        stroke: $colorGradient11
+    &.color2
+      color: $colorGradient21
+      .iconstroke
+        stroke: $colorGradient21
+    &.color3
+      color: $colorGradient31
+      .iconstroke
+        stroke: $colorGradient31
+
+    >.logo-icon
+      float: left
+
+    >.logo-typo
+      float: left
+      margin-top: 10px
+      margin-left: 5px
+      
+  .navbar-toggle
+    margin-top: 16px
+    background: $colorBg
+    border: 1px solid $colorBorder
+    @include roundedBox($cornerRaduis)
+    
+    >.icon-bar
+      background: $colorFontDefault
+
+  .navbar-collapse
+    padding-bottom: 20px
+    background: $colorLightBg
+    border-top: 1px solid $colorBorder
+    border-bottom: 1px solid $colorBorder
+    
+    .navigation
+      margin: 0
+      padding: 0
+      list-style-type: none
+      
+  
+      > li
+        margin-top: 10px
+        margin-left: 53px
+        padding: 5px 0
+        text-transform: uppercase
+        
+        
+        &.active
+          a
+            color: $colorFontGrey
+  
+        a
+          color: $colorFontDefault
+          text-decoration: none
+          &:hover
+            color: $colorFontGrey
+  
+
+/* ---- main
+  
+#main
+  padding-top: 70px
+
+  .cinema
+    height: 470px
+    text-align: center
+
+    .intro
+      color: $colorFontWhite
+      font-size: $fontSizeSuperBig
+      margin-top: 10px
+      margin-bottom: 20px
+
+    .signs
+      text-align: center
+
+      >.sign
+        display: inline-block
+        margin: 0 15px
+
+        &.idea
+          @include sprite-icon-idea-display
+        &.magic
+          @include sprite-icon-magic-display
+        &.love
+          @include sprite-icon-love-display
+
+    &.gradient1
+      @include bgGradient($colorGradient11, $colorGradient12)
+    &.gradient2
+      @include bgGradient($colorGradient21, $colorGradient22)
+    &.gradient3
+      @include bgGradient($colorGradient31, $colorGradient32)
+
+  .section
+    padding-top: 40px
+    padding-bottom: 90px
+
+    &.light
+      background: $colorLightBg
+
+    .intro
+      text-align: center
+
+      h3
+        font-size: $fontSizeTitle
+        margin-bottom: 0
+      p
+        margin-bottom: 40px
+
+    &.products
+
+      .product
+        >.content
+          margin: 15px
+          padding: 15px
+          background: $colorLightBg
+          
+    &.about
+      
+      .newsletter
+        text-align: center
+        
+        .title
+          margin-bottom: 13px
+        
+        input
+          border: 1px solid $colorBorder
+          background: $colorBg
+          width: 250px
+        
+        .btn-black
+          margin-top: 13px
+          background: $colorDarkBg
+          color: $colorFontWhite
+          text-transform: uppercase
+          
+        label
+          color: $colorFontGrey
+          margin-top: 5px
+          width: 230px
+
+          
+      
+/* ---- footer
+  
+footer
+  padding-top: 40px
+  height: 500px
+  background: $colorDarkBg
+  color: $colorFontGrey
+  text-align: center
+
+  a
+    color: $colorFontGrey
+  
+   
+
+  
+/* ---- imprint
+  
+#imprintModal
+  
+  .title
+    @include fontLight
+    font-size: $fontSizeBig
+    
+  .head
+    @include fontLight 
+    color: $colorFontGrey
+    display: inline
+  
+  .modal-content
+    @include roundedBox($cornerRaduis)
+    
+    .modal-header
+      .close
+        float: right
+        
+      h4
+        margin: 0
+    
+  
+  
+    
+/* ---- media
+  
+@media (min-width: $screen-phone)
+  
+  header
+    .logo
+      font-size: $fontSizeBig
+  
+  #main
+    .cinema
+      .intro
+        margin-top: 80px
+        
+     
+  
+
+@media (min-width: $screen-tablet)
+
+  header
+    .navbar-collapse
+      border-top: none
+      border-bottom: none
+      .navigation
+        > li
+          margin-top: 16px
+          
+  #main
+    .section
+      &.about
+        .newsletter
+          .btn-black
+            margin-top: 0
+
+  .modal-dialog
+    width: $screen-tablet
+        
+@media (min-width: $screen-desktop)
+
+  #main
+    .cinema
+      .intro
+        margin-top: 140px

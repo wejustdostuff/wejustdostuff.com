@@ -1,8 +1,52 @@
 ---
-title: Welcome to Middleman
+title: Yeahhh
 ---
+.cinema.gradient3#home
+  .container
+    .row
+      .col-sm-12
+        %h2.intro
+          We just do stuff to help you do stuff.
+          //We make things to help you make things.
+    .row
+      .col-sm-12.signs
+        .sign.idea
+        .sign.magic
+        .sign.love
 
-.welcome
-  %h1 Middleman is Watching :)
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+      
+.section.products.dark#products
+  .container
+    .row.intro
+      .col-md-8.col-md-offset-2
+        %h3
+          Products
+        %p
+          Cak pwico siructiun ruos nust apoply tyu cak UCU sisulutiun munityuw uw cak UCU-TGU jot scannow. Trens roxas eis ti Plokeing quert loppe eis yop prexs. Piy opher hawers, eit yaggles orn ti sumbloat alohe plok.
+    .row
+      .col-md-6.col-sm-12.product
+        .content
+          Product 1
+      .col-md-6.col-sm-12.product
+        .content
+          Product 2
+
+
+.section.about.light#about
+  .container
+    .row.intro
+      .col-md-8.col-md-offset-2
+        %h3
+          About Us
+        %p
+          We are a just two creative individuals who love to produce any kind of new media stuff. If you want to know more about us and our award winning projects, visit our portfolio site
+          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com"}We Are Interactive
+    .row.newsletter
+      .col-sm-12
+        .title
+          Never miss an update again!
+        %form#mailchimpform
+          %input#mc-email{placeholder: "Your E-Mail adress", type: "email"}
+          %button.btn-black{type: "submit"} Subscribe
+          %br
+          %label{for: "mc-email"}
