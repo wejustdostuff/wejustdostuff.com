@@ -9,13 +9,16 @@
     %meta{:content => "width=device-width", :name => "viewport"}
     %title= page_title
     %meta{:content => page_description, :name => "description"}
-    %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", :type => "text/css"}
+    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "120x120", href: "/apple-touch-icon-120x120-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "/apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "/apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "57x57", href: "/apple-touch-icon-57x57-precomposed.png" }
+    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
+    %link{ rel: "shortcut icon", href: "favicon.png" }
+    %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
-    -#Favicon Options:
-    -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
-    -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
-
-    = stylesheet_link_tag "all"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", "all"
     = javascript_include_tag  "modernizr"
 
   %body{:class => page_classes}
@@ -35,7 +38,7 @@
                 %rect{"class" => "iconstroke", "clip-rule" => "evenodd", fill: "none", "fill-rule" => "evenodd", height: "11.883", stroke: "#010202", "stroke-linecap" => "round", "stroke-linejoin" => "round", "stroke-miterlimit" => "10", "stroke-width" => "2", transform: "matrix(0.7073 0.7069 -0.7069 0.7073 16.7135 -11.1544)", width: "5.469", x: "19.092", y: "8.663"}
                 %polyline{"class" => "iconstroke", "clip-rule" => "evenodd", fill: "none", "fill-rule" => "evenodd", points: "\r\n\t\t12.713,12.117 7.227,2.834 2.834,5.358 8.179,21.846 3.995,28.601 12.446,37.054 19.203,32.869 26.248,30.578 31.722,23.39 \r\n\t\t41.619,13.494 38.079,9.953 32.047,15.983 \t", stroke: "#010202", "stroke-linecap" => "round", "stroke-linejoin" => "round", "stroke-miterlimit" => "10", "stroke-width" => "2"}
             .logo-typo We Just Do Stuff
-            
+
         %nav.collapse.navbar-collapse.navbar-right{role:"navigation"}
           %ul.nav.navbar-nav.navigation
             %li.active.home
@@ -44,22 +47,33 @@
               %a{title: "Products", href: "#products"} Products
             %li
               %a{title: "About us", href: "#about"} About us
-      
+
     #main
       = yield
-    
+
     %footer
       .container
         .row
           .col-md-12
           We Just Do Stuff, Zeppelinstr. 55, 81669 Munich, Germany, Earth
           %br
-          089 - 62286775,
+          +49 (0) 89 - 62286775,
           %a{title: "yeah@wejustdostuff.com", href: "mailto:yeah@wejustdostuff.com"}yeah@wejustdostuff.com
           ,
-          %a{title: "Impressum", "data-toggle" => "modal", href: "#imprintModal"}Impressum
-    
-    
+          %a{title: "Imprint", "data-toggle" => "modal", href: "#imprintModal"}Imprint
+
+
     = partial "partials/imprint"
 
     = javascript_include_tag  "main"
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23550216-2']);
+      _gaq.push(['_gat._anonymizeIp', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

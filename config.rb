@@ -3,7 +3,7 @@
 ###
 
 set :site_name, "We Just Do Stuff"
-set :site_description, "Edit your config.rb to set the global description."
+set :site_description, "We just do stuff to help you do stuff."
 
 ###
 # Compass
@@ -45,6 +45,7 @@ page "/404.html", :layout => false
 # Reload the browser automatically whenever files change
 activate :livereload
 
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -70,10 +71,12 @@ configure :build do
   activate :favicon_maker
   activate :cache_buster
   activate :relative_assets
+end
 
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+# Deploy-specific configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :rsync
+  deploy.host   = "www.wejustdostuff.com"
+  deploy.path   = "/var/www/wejustdostuff.com/htdocs"
 end

@@ -22,10 +22,10 @@ a
 \:-moz-any-link:focus
   outline: none
 
-                 
+
 h1, h2, h3, h4
   @include fontLight
-  
+
 input, button
   @include roundedBox($cornerRaduis)
   box-shadow: none
@@ -36,7 +36,7 @@ input, button
 
 
 
-/* ---- layout -------------------------------------------  
+/* ---- layout -------------------------------------------
 
 
 /* ---- header
@@ -71,13 +71,13 @@ header
       float: left
       margin-top: 10px
       margin-left: 5px
-      
+
   .navbar-toggle
     margin-top: 16px
     background: $colorBg
     border: 1px solid $colorBorder
     @include roundedBox($cornerRaduis)
-    
+
     >.icon-bar
       background: $colorFontDefault
 
@@ -86,33 +86,33 @@ header
     background: $colorLightBg
     border-top: 1px solid $colorBorder
     border-bottom: 1px solid $colorBorder
-    
+
     .navigation
       margin: 0
       padding: 0
       list-style-type: none
-      
-  
+
+
       > li
         margin-top: 10px
         margin-left: 53px
         padding: 5px 0
         text-transform: uppercase
-        
-        
+
+
         &.active
           a
             color: $colorFontGrey
-  
+
         a
           color: $colorFontDefault
           text-decoration: none
           &:hover
             color: $colorFontGrey
-  
+
 
 /* ---- main
-  
+
 #main
   padding-top: 70px
 
@@ -134,11 +134,11 @@ header
         margin: 0 15px
 
         &.idea
-          @include sprite-icon-idea-display
+          @include sprite-icon-idea-display()
         &.magic
-          @include sprite-icon-magic-display
+          @include sprite-icon-magic-display()
         &.love
-          @include sprite-icon-love-display
+          @include sprite-icon-love-display()
 
     &.gradient1
       @include bgGradient($colorGradient11, $colorGradient12)
@@ -170,35 +170,35 @@ header
           margin: 15px
           padding: 15px
           background: $colorLightBg
-          
+
     &.about
-      
+
       .newsletter
         text-align: center
-        
+
         .title
           margin-bottom: 13px
-        
+
         input
           border: 1px solid $colorBorder
           background: $colorBg
           width: 250px
-        
+
         .btn-black
           margin-top: 13px
           background: $colorDarkBg
           color: $colorFontWhite
           text-transform: uppercase
-          
+
         label
           color: $colorFontGrey
           margin-top: 5px
           width: 230px
 
-          
-      
+
+
 /* ---- footer
-  
+
 footer
   padding-top: 40px
   height: 500px
@@ -208,51 +208,51 @@ footer
 
   a
     color: $colorFontGrey
-  
-   
 
-  
+
+
+
 /* ---- imprint
-  
+
 #imprintModal
-  
+
   .title
     @include fontLight
     font-size: $fontSizeBig
-    
+
   .head
-    @include fontLight 
+    @include fontLight
     color: $colorFontGrey
     display: inline
-  
+
   .modal-content
     @include roundedBox($cornerRaduis)
-    
+
     .modal-header
       .close
         float: right
-        
+
       h4
         margin: 0
-    
-  
-  
-    
+
+
+
+
 /* ---- media
-  
+
 @media (min-width: $screen-phone)
-  
+
   header
     .logo
       font-size: $fontSizeBig
-  
+
   #main
     .cinema
       .intro
         margin-top: 80px
-        
-     
-  
+
+
+
 
 @media (min-width: $screen-tablet)
 
@@ -263,7 +263,7 @@ footer
       .navigation
         > li
           margin-top: 16px
-          
+
   #main
     .section
       &.about
@@ -273,7 +273,7 @@ footer
 
   .modal-dialog
     width: $screen-tablet
-        
+
 @media (min-width: $screen-desktop)
 
   #main
