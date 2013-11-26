@@ -1,18 +1,23 @@
 ---
 title: Yeahhh
 ---
-.cinema.gradient1#home
-  .container
-    .row
-      .col-sm-12
-        %h2.intro
-          We just do stuff to help you do stuff.
-          //We make things to help you make things.
-    .row
-      .col-sm-12.signs
-        .sign.idea
-        .sign.magic
-        .sign.love
+.cinema#home
+  .gradientcontent
+    .gradient.gradient1
+    .gradient.gradient2
+    .gradient.gradient3
+  .infocontent
+    .container
+      .row
+        .col-sm-12
+          %h2.intro
+            We just do stuff to help you do stuff.
+            //We make things to help you make things.
+      .row
+        .col-sm-12.signs
+          .sign.idea
+          .sign.magic
+          .sign.love
 
       
 .section.products.dark#products
@@ -22,14 +27,32 @@ title: Yeahhh
         %h3
           Products
         %p
-          Cak pwico siructiun ruos nust apoply tyu cak UCU sisulutiun munityuw uw cak UCU-TGU jot scannow. Trens roxas eis ti Plokeing quert loppe eis yop prexs. Piy opher hawers, eit yaggles orn ti sumbloat alohe plok.
+          Currently we are working on your Owl-Stars product series. These Product Series should help you for a faster and easier web development.
+
     .row
       .col-md-6.col-sm-12.product
         .content
-          Product 1
+          .productimg
+            %img{src: "assets/img/products/spriteowl.png"}
+          %h4
+            Spriteowl
+          Photoshop Extension
+          %p
+            Spriteowl is a Photoshop Extension which saves you a lot of time when working with Sprite Images and Css. Spriteowl retrieves all sprite element's x, y, widths and heights for you and supports Css, Less, Sass/Scss and Stylus.
+          %a.button
+            Find out more
+
       .col-md-6.col-sm-12.product
         .content
-          Product 2
+          .productimg
+            %img{src: "assets/img/products/cssowl.png"}
+          %h4
+            Cssowl
+          Open Source Mixin Library
+          %p
+            Cssowl is been created to work with Photoshop Extensions like Spriteowl but it can also be used by it self to help you for faster and easier web development. Cssowl supports Less, Sass/Scss and Stylus.
+          %a.button
+            Find out more
 
 
 .section.about.light#about

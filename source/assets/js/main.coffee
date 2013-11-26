@@ -8,7 +8,7 @@
 
 $(window).load ->
   $("#mailchimpform").ajaxChimp
-    url: "http://wejustdostuff.us7.list-manage.com/subscribe/post?u=9d88ce76bb9c9bb3bea3601f0&id=1e7429d7b8"
+    url: "http://wejustdostuff.us7.list-manage.com/subscribe/post?u=9d88ce76bb9c9bb3bea3601f0&id=2e63c2f86c"
 
 
 $(document).ready ->
@@ -19,8 +19,8 @@ $(document).ready ->
   )
   mainMenu.foo_public_method()
 
-  #setInterval (->
-  #  $(".imgslideshow :first-child").fadeOut(1000).next("img").fadeIn(1000).end().appendTo ".imgslideshow"), 6000
-  
 
-  
+  $(".gradientcontent .gradient:gt(0)").hide()
+  setInterval (->
+    $(".gradientcontent :first-child").fadeOut(18000).next(".gradient").fadeIn(18000).end().appendTo ".gradientcontent"
+  ), 20000

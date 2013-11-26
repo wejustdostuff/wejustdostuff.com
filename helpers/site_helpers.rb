@@ -2,7 +2,7 @@ module SiteHelpers
 
   def page_title
     if data.page.title
-      data.page.title + " | " + settings.site_name
+      settings.site_name + " - " +data.page.title
     else
       settings.site_name
     end
