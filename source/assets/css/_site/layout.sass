@@ -1,11 +1,9 @@
-
-/* ---- global -------------------------------------------
-
+// ---- global ------------------------------------------------------------------------------------
 
 body
   @include fontRegular
-  font-size: $fontSizeBase
   background: $colorBg
+  font-size: $fontSizeBase
 
 a
   @include transition
@@ -48,17 +46,14 @@ input, button, .button
     color: $colorFontWhite
     background: $colorDarkGrey
 
+// ---- layout ------------------------------------------------------------------------------------
 
-
-/* ---- layout -------------------------------------------
-
-
-/* ---- header
+// --- header ---
 
 header
-  background: $colorLightBg
-  height: 70px
   width: 100%
+  height: 70px
+  background: $colorLightBg
   border-bottom: 1px solid $colorBorder !important
 
   .logo
@@ -101,11 +96,10 @@ header
     border-top: 1px solid $colorBorder
     border-bottom: 1px solid $colorBorder
 
-    .navigation
+    .nav
       margin: 0
       padding: 0
       list-style-type: none
-
 
       > li
         margin-top: 10px
@@ -113,19 +107,19 @@ header
         padding: 5px 0
         text-transform: uppercase
 
+        a
+          color: $colorFontDefault
+          text-decoration: none
+
+          &:hover
+            color: $colorFontGrey
 
         &.active
           a
             color: $colorFontGrey
 
-        a
-          color: $colorFontDefault
-          text-decoration: none
-          &:hover
-            color: $colorFontGrey
 
-
-/* ---- main
+// --- main ---
 
 #main
   padding-top: 70px
@@ -238,9 +232,7 @@ header
           margin-top: 5px
           width: 400px
 
-
-
-/* ---- footer
+// --- footer ---
 
 footer
   padding-top: 40px
@@ -252,10 +244,7 @@ footer
   a
     color: $colorFontGrey
 
-
-
-
-/* ---- imprint
+// --- imprint ---
 
 #imprintModal
 
@@ -278,10 +267,7 @@ footer
       h4
         margin: 0
 
-
-
-
-/* ---- media
+// ---- media -------------------------------------------------------------------------------------
 
 @media (min-width: $screen-phone)
 
@@ -293,9 +279,6 @@ footer
     .cinema
       .intro
         margin-top: 80px
-
-
-
 
 @media (min-width: $screen-tablet)
 
