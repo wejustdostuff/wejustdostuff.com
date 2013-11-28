@@ -1,0 +1,48 @@
+// ---- global ------------------------------------------------------------------------------------
+
+body
+  @include fontRegular
+  background: $colorBg
+  font-size: $fontSizeBase
+
+a
+  outline: none
+  color: $colorFontDefault
+  text-decoration: underline
+  +transition-duration(0.3s)
+  +transition-property(color)
+  &:active
+    outline: none
+  &:focus
+    -moz-outline-style: none
+  &:hover
+    color: $colorFontGrey
+
+\:-moz-any-link:focus
+  outline: none
+
+
+h1, h2, h3, h4
+  @include fontLight
+
+h4
+  font-size: $fontSizeBig
+
+input, button, .button
+  border: none
+  height: 34px
+  padding: 0 10px
+  box-shadow: none
+  +border-radius($cornerRaduis)
+
+.button
+  cursor: pointer
+  padding: 4px 10px
+  text-decoration: none
+  background: $colorDarkBg
+  color: $colorFontWhite
+  text-transform: uppercase
+  &:hover
+    text-decoration: none
+    color: $colorFontWhite
+    background: $colorDarkGrey
