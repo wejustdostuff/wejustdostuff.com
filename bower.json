@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "middleman-project_wejustdostuff",
+  "name": "middleman-site-wejustdostuff",
   "dependencies": {
     "jquery": "~1.9.1",
     "cssowl": "~1.0.6",
