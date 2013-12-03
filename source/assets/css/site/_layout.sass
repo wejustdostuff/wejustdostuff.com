@@ -144,17 +144,16 @@ header
     &.products
 
       .product
-        >.content
-          margin: 15px
-          padding: 20px 30px 40px 30px
-          background: $colorLightBg
+        margin: 15px
+        padding: 30px
+        background: $colorLightBg
 
-          >.productimg
-            text-align: center
+        .productimg
+          text-align: center
 
-          h4
-            margin-top: 0
-            margin-bottom: 0
+        h4
+          margin-top: 20px
+          margin-bottom: 0
 
     &.about
 
@@ -175,11 +174,16 @@ header
           color: $colorFontWhite
           text-transform: uppercase
 
+          &:hover
+            color: $colorFontWhite
+            background: $colorDarkGrey
+
 
         label
           color: $colorFontGrey
           margin-top: 5px
           width: 400px
+          font-weight: normal
 
 // --- footer ---
 

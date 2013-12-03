@@ -24,31 +24,22 @@
         %h3
           Products
         %p
-          Currently we are working on your Owl-Stars product series. These Product Series should help you for a faster and easier web development.
+          What we are up to at the moment
 
-    .row
-      .col-md-6.col-sm-12.product
-        .content
-          .productimg
-            %img{src: "assets/img/products/spriteowl.png"}
-          %h4
-            Spriteowl
-          Photoshop Extension
-          %p
-            Spriteowl is a Photoshop Extension which saves you a lot of time when working with Sprite Images and Css. Spriteowl retrieves all sprite element's x, y, widths and heights for you and supports Css, Less, Sass/Scss and Stylus.
-          %a.button
-            Find out more
+    .row.product
 
-      .col-md-6.col-sm-12.product
+      .col-md-4
+        .productimg
+          %img{src: "assets/img/products/owl-stars.png"}
+
+      .col-md-8
         .content
-          .productimg
-            %img{src: "assets/img/products/cssowl.png"}
           %h4
-            Cssowl
-          Open Source Mixin Library
+            Owl-Stars
+          Product series
           %p
-            Cssowl is been created to work with Photoshop Extensions like Spriteowl but it can also be used by it self to help you for faster and easier web development. Cssowl supports Less, Sass/Scss and Stylus.
-          %a.button
+            We are working on our Owl-Stars product series. These products enable you to develop websites faster and easier. Sounds good? Don't wait to find out more!
+          %a.button{title: "Owl-Stars", href: "http://www.owl-stars.com"}
             Find out more
 
 // --- about ---
@@ -59,14 +50,15 @@
         %h3
           About Us
         %p
-          We are a just two creative individuals who love to produce any kind of new media stuff. If you want to know more about us and our award winning projects, visit our portfolio site
-          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com"}We Are Interactive
+          We are a two creative guys who simply love to produce any kind of new media stuff. If you want to know more about us and our award winning projects, visit our portfolio site
+          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com"}We Are Interactive.
+
     .row.newsletter
       .col-sm-12
         .title
-          Never miss an update again!
+          Don't miss our software updates!
         %form#mailchimpform
-          %input#mc-email{placeholder: "Your E-Mail adress", type: "email"}
+          %input#mc-email{placeholder: "Your email adress", type: "email"}
           %button.btn-black{type: "submit"} Subscribe
           %br
           %label{for: "mc-email"}
