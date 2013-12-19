@@ -122,6 +122,6 @@ DEPENDENCIES
   middleman-favicon-maker (~> 3.3)
   middleman-google-analytics (~> 0.0.2)
   middleman-livereload (~> 3.1.0)
-  middlesite (~> 0.1.1)
+  middlesite (~> 0.1.2)
   ruby18_source_location
   wdm (~> 0.1.0)
