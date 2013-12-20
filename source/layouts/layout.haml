@@ -1,7 +1,7 @@
 !!!5
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8] <html class="no-js lt-ie9">
+/[if lt IE 7] <html class="lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="lt-ie9 lt-ie8">
+/[if IE 8] <html class="lt-ie9">
 %html.no-js
   %head
     %meta{:charset => "utf-8"}
@@ -20,7 +20,6 @@
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", "site"
-    = javascript_include_tag  "modernizr"
     = google_analytics_tag
 
   %body{:class => page_classes}

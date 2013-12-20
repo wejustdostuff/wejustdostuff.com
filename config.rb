@@ -55,6 +55,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   # others
+  activate :asset_hash
   activate :cache_buster
   activate :favicon_maker
   activate :relative_assets
