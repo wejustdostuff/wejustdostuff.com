@@ -1,5 +1,4 @@
-// --- home ---
-#home.cinema
+%section#home.cinema
   .gradientcontent
     .gradient.gradient1
     .gradient.gradient2
@@ -16,8 +15,7 @@
           .sign.magic
           .sign.love
 
-// --- stuff ---
-#stuff.section.products.dark
+%section#stuff.section.products.dark
   .container
     .row.intro
       .col-md-8.col-md-offset-2
@@ -27,8 +25,7 @@
     .row.product
 
       .col-md-4
-        .productimg
-          %img.img-responsive{src: "assets/img/products/owl-stars.png"}
+        =image_tag "assets/img/products/owl-stars.png", :alt => "Owl-Stars", :class => "img-responsive"
 
       .col-md-8
         .content
@@ -36,18 +33,17 @@
           Product series
           %p
             We are working on our Owl-Stars product series. These products enable you to develop websites faster and easier. Sounds good? Don't wait to find out more!
-          %a.button{title: "Owl-Stars", href: "http://www.owl-stars.com"}
-            Find out more
+          =link_to "Find out more", "http://www.owl-stars.com", :title => "Owl-Stars", :class => "button"
 
-// --- about ---
-#about.section.about.light
+
+%section#about.section.about
   .container
     .row.intro
       .col-md-8.col-md-offset-2
         %h3 About Us
         %p
           We are a two creative guys who simply love to produce any kind of new media stuff. If you want to know more about us and our award winning projects, visit our portfolio site
-          %a{title: "We Are Interactive", href: "http://www.weareinteractive.com"}We Are Interactive.
+          =link_to "We Are Interactive", "http://www.weareinteractive.com"
 
     .row.newsletter
       .col-sm-12

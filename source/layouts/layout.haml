@@ -44,25 +44,25 @@
         %nav.collapse.navbar-collapse.navbar-right{role:"navigation"}
           %ul.nav.navbar-nav
             %li.active.home
-              %a{title: "Home", href: "#home"} Home
+              =link_to "Home", "#main"
             %li
-              %a{title: "Stuff", href: "#stuff"} Stuff
+              =link_to "Stuff", "#stuff"
             %li
-              %a{title: "About us", href: "#about"} About us
+              =link_to "About us", "#about"
 
-    #main
+    #main{role:"main"}
       = yield
 
-    %footer
+    %footer#footer
       .container
         .row
           .col-md-12
           We Just Do Stuff, Zeppelinstr. 55, 81669 Munich, Germany, Earth
           %br
           +49 (0) 89 - 62286775,
-          %a{title: "yeah@wejustdostuff.com", href: "mailto:yeah@wejustdostuff.com"}yeah@wejustdostuff.com
+          =link_to "yeah@wejustdostuff.com", "mailto:yeah@wejustdostuff.com"
           ,
-          %a{title: "Imprint", "data-toggle" => "modal", href: "#imprintModal"}Imprint
+          =link_to "Imprint", "#imprint", :data => {:toggle => "modal"}
 
     = partial "partials/imprint"
     = javascript_include_tag  "main"
