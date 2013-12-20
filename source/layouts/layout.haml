@@ -2,7 +2,7 @@
 /[if lt IE 7] <html class="lt-ie9 lt-ie8 lt-ie7">
 /[if IE 7] <html class="lt-ie9 lt-ie8">
 /[if IE 8] <html class="lt-ie9">
-%html.no-js
+%html
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
@@ -22,7 +22,7 @@
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", "site"
 
   %body{:class => page_classes}
-    %header#navbar-header.navbar.navbar-fixed-top{role:"banner"}
+    %header#header.navbar.navbar-fixed-top{role:"banner"}
       .container
         .navbar-header
           %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
@@ -48,7 +48,7 @@
             %li
               =link_to "About us", "#about"
 
-    #main{role:"main"}
+    #main{:role => "main"}
       = yield
 
     %footer#footer

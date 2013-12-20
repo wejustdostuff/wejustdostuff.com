@@ -15,8 +15,8 @@ $(document).ready ->
     $(".gradientcontent :first-child").fadeOut(18000).next(".gradient").fadeIn(18000).end().appendTo ".gradientcontent"
   ), 20000
 
-  $('body').scrollspy({ target: '#navbar-header', offset: 60 })
-  $("#navbar-header nav a[href^='#']").on('click', (e) ->
+  $('body').scrollspy({ target: '#header', offset: 60 })
+  $("#header nav a[href^='#']").on('click', (e) ->
     e.preventDefault()
     $('html, body').animate({scrollTop: $(@hash).offset().top - 55}, 300)
   )
