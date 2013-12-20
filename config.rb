@@ -53,6 +53,7 @@ end
 configure :build do
   # cache
   activate :minify_css
+  activate :minify_html
   activate :minify_javascript
   # others
   activate :asset_hash
