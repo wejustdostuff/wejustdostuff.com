@@ -24,7 +24,7 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "www.wejustdostuff.com"
   deploy.path   = "/var/www/wejustdostuff.com/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w -e"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
 end
 
 ###
@@ -55,6 +55,10 @@ configure :build do
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
+  activate :imageoptim do |options|
+    options.pngout_options    = false
+    options.advpng_options    = false
+  end
   # others
   activate :asset_hash
   activate :cache_buster
