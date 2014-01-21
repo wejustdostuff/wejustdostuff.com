@@ -1,5 +1,3 @@
-require 'builder'
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -23,7 +21,7 @@ activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.clean  = true
   deploy.host   = "www.wejustdostuff.com"
-  deploy.path   = "/var/www/wejustdostuff.com/htdocs"
+  deploy.path   = "/var/www/wejustdostuff/htdocs"
   deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
 end
 
