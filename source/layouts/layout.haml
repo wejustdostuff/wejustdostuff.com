@@ -20,6 +20,7 @@
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", "site"
+    = google_analytics_tag
 
   %body{:class => page_classes}
     %header#header.navbar.navbar-fixed-top{role:"banner"}
@@ -64,4 +65,3 @@
 
     = partial "partials/imprint"
     = javascript_include_tag  "main"
-    = google_analytics_tag
