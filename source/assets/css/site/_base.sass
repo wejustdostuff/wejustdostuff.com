@@ -1,10 +1,12 @@
 // ---- global ------------------------------------------------------------------------------------
 
+html
+  font-size: 100%
 
 body
   @include fontRegular
   background: $colorBg
-  font-size: $fontSizeBase
+  +font-size($fontSizeBase)
 
 a
   outline: none

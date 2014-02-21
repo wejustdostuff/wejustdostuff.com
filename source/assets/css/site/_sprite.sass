@@ -1,9 +1,9 @@
-// Generated with Spriteowl v1.0.0
-// for format: cssowl v1.0.x
+// Generated with Spriteowl v1.2.0
 //
 // Please define the location for your image source:
 //
-// $sprite: url("sprite.png")
+// $sprite-sheet-image: url("sprite.png")
+// $sprite-sheet-image-2x: url("sprite@2x.png")
 //
 // --- Layers --------------------------------------------
 //
@@ -13,168 +13,108 @@
 //     - magic
 //     - love
 //
-$sprite-icon-idea-x: 0
-$sprite-icon-idea-y: 0
-$sprite-icon-idea-width: 85px
-$sprite-icon-idea-height: 85px
-$sprite-icon-idea-src: $sprite
+$sprite-sheet-width: 280px !default
+$sprite-sheet-height: 85px !default
+$sprite-sheet-image: url("sprite.png") !default
+$sprite-sheet-image-2x: url("sprite@2x.png") !default
+$sprite-sheet: $sprite-sheet-width $sprite-sheet-height $sprite-sheet-image $sprite-sheet-image-2x sprite !default
 
-@mixin sprite-icon-idea-position()
+=sprite-element()
+  background-image: $sprite-sheet-image
+  background-repeat: no-repeat
+  @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+    background-image: $sprite-sheet-image-2x
+    background-size: $sprite-sheet-width $sprite-sheet-height
+%sprite-element
+  +sprite-element()
+
+$sprite-icon-idea-x: 0 !default
+$sprite-icon-idea-y: 0 !default
+$sprite-icon-idea-width: 85px !default
+$sprite-icon-idea-height: 85px !default
+$sprite-icon-idea: $sprite-icon-idea-x $sprite-icon-idea-y $sprite-icon-idea-width $sprite-icon-idea-height sprite-icon-idea !default
+
+=sprite-icon-idea-width()
+  width: $sprite-icon-idea-width
+%sprite-icon-idea-width
+  +sprite-icon-idea-width()
+=sprite-icon-idea-height()
+  height: $sprite-icon-idea-height
+%sprite-icon-idea-height
+  +sprite-icon-idea-height()
+=sprite-icon-idea-size()
+  +sprite-icon-idea-width()
+  +sprite-icon-idea-height()
+%sprite-icon-idea-size
+  +sprite-icon-idea-size()
+=sprite-icon-idea-position()
   background-position: $sprite-icon-idea-x $sprite-icon-idea-y
-@mixin sprite-icon-idea-display()
-  +cssowl-sprite-display($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-display-block()
-  +cssowl-sprite-display-block($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $yOffset, $valign)
-@mixin sprite-icon-idea-replace()
-  +cssowl-sprite-replace($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-replace-block()
-  +cssowl-sprite-replace-block($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $yOffset, $valign)
-@mixin sprite-icon-idea-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-idea-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-idea-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-idea-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset)
-@mixin sprite-icon-idea-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset)
-@mixin sprite-icon-idea-before()
-  +cssowl-sprite-before($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-idea-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset)
-@mixin sprite-icon-idea-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-idea-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-idea-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-idea-after()
-  +cssowl-sprite-after($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src)
-@mixin sprite-icon-idea-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-idea-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $xOffset, $yOffset)
-@mixin sprite-icon-idea-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-idea-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-idea-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-icon-idea-x, $sprite-icon-idea-y, $sprite-icon-idea-width, $sprite-icon-idea-height, $sprite-icon-idea-src, $valign, $halign, $xOffset, $yOffset)
+%sprite-icon-idea-position
+  +sprite-icon-idea-position()
+=sprite-icon-idea()
+  +sprite-icon-idea-size()
+  +sprite-icon-idea-position()
+  @extend %sprite-element
+%sprite-icon-idea
+  +sprite-icon-idea()
 
-$sprite-icon-magic-x: -100px
-$sprite-icon-magic-y: 0
-$sprite-icon-magic-width: 85px
-$sprite-icon-magic-height: 85px
-$sprite-icon-magic-src: $sprite
+$sprite-icon-magic-x: -97px !default
+$sprite-icon-magic-y: 0 !default
+$sprite-icon-magic-width: 86px !default
+$sprite-icon-magic-height: 85px !default
+$sprite-icon-magic: $sprite-icon-magic-x $sprite-icon-magic-y $sprite-icon-magic-width $sprite-icon-magic-height sprite-icon-magic !default
 
-@mixin sprite-icon-magic-position()
+=sprite-icon-magic-width()
+  width: $sprite-icon-magic-width
+%sprite-icon-magic-width
+  +sprite-icon-magic-width()
+=sprite-icon-magic-height()
+  height: $sprite-icon-magic-height
+%sprite-icon-magic-height
+  +sprite-icon-magic-height()
+=sprite-icon-magic-size()
+  +sprite-icon-magic-width()
+  +sprite-icon-magic-height()
+%sprite-icon-magic-size
+  +sprite-icon-magic-size()
+=sprite-icon-magic-position()
   background-position: $sprite-icon-magic-x $sprite-icon-magic-y
-@mixin sprite-icon-magic-display()
-  +cssowl-sprite-display($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-display-block()
-  +cssowl-sprite-display-block($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $yOffset, $valign)
-@mixin sprite-icon-magic-replace()
-  +cssowl-sprite-replace($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-replace-block()
-  +cssowl-sprite-replace-block($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $yOffset, $valign)
-@mixin sprite-icon-magic-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-magic-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-magic-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-magic-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset)
-@mixin sprite-icon-magic-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset)
-@mixin sprite-icon-magic-before()
-  +cssowl-sprite-before($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-magic-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset)
-@mixin sprite-icon-magic-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-magic-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-magic-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-magic-after()
-  +cssowl-sprite-after($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src)
-@mixin sprite-icon-magic-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-magic-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $xOffset, $yOffset)
-@mixin sprite-icon-magic-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-magic-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-magic-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-icon-magic-x, $sprite-icon-magic-y, $sprite-icon-magic-width, $sprite-icon-magic-height, $sprite-icon-magic-src, $valign, $halign, $xOffset, $yOffset)
+%sprite-icon-magic-position
+  +sprite-icon-magic-position()
+=sprite-icon-magic()
+  +sprite-icon-magic-size()
+  +sprite-icon-magic-position()
+  @extend %sprite-element
+%sprite-icon-magic
+  +sprite-icon-magic()
 
-$sprite-icon-love-x: -200px
-$sprite-icon-love-y: 0
-$sprite-icon-love-width: 85px
-$sprite-icon-love-height: 85px
-$sprite-icon-love-src: $sprite
+$sprite-icon-love-x: -195px !default
+$sprite-icon-love-y: 0 !default
+$sprite-icon-love-width: 85px !default
+$sprite-icon-love-height: 85px !default
+$sprite-icon-love: $sprite-icon-love-x $sprite-icon-love-y $sprite-icon-love-width $sprite-icon-love-height sprite-icon-love !default
 
-@mixin sprite-icon-love-position()
+=sprite-icon-love-width()
+  width: $sprite-icon-love-width
+%sprite-icon-love-width
+  +sprite-icon-love-width()
+=sprite-icon-love-height()
+  height: $sprite-icon-love-height
+%sprite-icon-love-height
+  +sprite-icon-love-height()
+=sprite-icon-love-size()
+  +sprite-icon-love-width()
+  +sprite-icon-love-height()
+%sprite-icon-love-size
+  +sprite-icon-love-size()
+=sprite-icon-love-position()
   background-position: $sprite-icon-love-x $sprite-icon-love-y
-@mixin sprite-icon-love-display()
-  +cssowl-sprite-display($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-display-block()
-  +cssowl-sprite-display-block($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $yOffset, $valign)
-@mixin sprite-icon-love-replace()
-  +cssowl-sprite-replace($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-replace-block()
-  +cssowl-sprite-replace-block($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $yOffset, $valign)
-@mixin sprite-icon-love-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-love-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-love-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-love-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset)
-@mixin sprite-icon-love-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset)
-@mixin sprite-icon-love-before()
-  +cssowl-sprite-before($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-love-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset)
-@mixin sprite-icon-love-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-love-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-love-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-love-after()
-  +cssowl-sprite-after($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src)
-@mixin sprite-icon-love-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset, $valign)
-@mixin sprite-icon-love-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $xOffset, $yOffset)
-@mixin sprite-icon-love-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $top, $right, $bottom, $left)
-@mixin sprite-icon-love-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-icon-love-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-icon-love-x, $sprite-icon-love-y, $sprite-icon-love-width, $sprite-icon-love-height, $sprite-icon-love-src, $valign, $halign, $xOffset, $yOffset)
+%sprite-icon-love-position
+  +sprite-icon-love-position()
+=sprite-icon-love()
+  +sprite-icon-love-size()
+  +sprite-icon-love-position()
+  @extend %sprite-element
+%sprite-icon-love
+  +sprite-icon-love()
 
