@@ -22,7 +22,7 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "www.wejustdostuff.com"
   deploy.path   = "/var/www/wejustdostuff/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r"
 end
 
 ###
@@ -61,7 +61,17 @@ configure :build do
   end
   # others
   activate :cache_buster
-  activate :favicon_maker
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" => [
+      { icon: "apple-touch-icon-144x144-precomposed.png" },
+      { icon: "apple-touch-icon-120x120-precomposed.png" },
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-57x57-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+    ]
+  }
   # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true
