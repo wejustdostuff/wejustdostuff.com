@@ -34,7 +34,9 @@ set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
 set :fonts_dir, 'assets/fonts'
 
-sprockets.append_path File.join "#{root}", "bower_components"
+after_configuration do
+  sprockets.append_path File.join "#{root}", "bower_components"
+end
 
 ###
 # Environments
