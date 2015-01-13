@@ -1,5 +1,6 @@
 ---
+version: 1.1.0
 name: We Just Do Stuff - Yeahhh
 description: We just do stuff to help you do stuff.
-version: 1.0.0
+url: http://www.wejustdostuff.com
 ga_account: UA-23550216-2
