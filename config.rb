@@ -37,16 +37,6 @@ configure :development do
 	activate :livereload
 end
 
-# Deploy-specific configuration
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :rsync
-  deploy.clean  = true
-  deploy.host   = "www.wejustdostuff.com"
-  deploy.path   = "/var/www/wejustdostuff/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r"
-end
-
 # Build-specific configuration
 configure :build do
 	# robots.txt
@@ -93,4 +83,14 @@ configure :build do
 	    { icon: "mstile-310x150.png", size: "310x150" }
 	  ]
   }
+end
+
+# Deploy-specific configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :rsync
+  deploy.clean  = true
+  deploy.host   = "www.wejustdostuff.com"
+  deploy.path   = "/var/www/wejustdostuff/htdocs"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r"
 end
