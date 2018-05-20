@@ -28,7 +28,6 @@ $ rvm get stable
 ```
 
 *Install [Jewelybox](http://jewelrybox.unfiniti.com/) to see installed Rubys and Gems through a nice GUI.*
-```
 
 ### Rake
 
@@ -58,14 +57,6 @@ To install `middleman` run:
 $ gem install middleman
 ```
 
-### Middlesite
-
-To install `middlesite` run:
-
-```
-$ gem install middlesite
-```
-
 ## Workspace
 
 ### Setup
@@ -76,24 +67,11 @@ To setup your workspace checkout the repository:
 $ git clone ssh://git@bitbucket.org/wejustdostuff/middleman-site-wejustdostuff.git
 ```
 
-To install all the dependencies run:
-
-```
-$ middlesite init
-```
-
 ### Development
 
-With `middlesite` you have the following commands:
-
-```
-Commands:
-  middlesite build           # Generate build from sources
-  middlesite bump [TYPE]     # Bump version (patch|minor|major), commit, tag, and push.
-  middlesite deploy          # Build and deploy to server
-  middlesite help [COMMAND]  # Describe available commands or one specific command
-  middlesite init            # Initialize the workspace.
-  middlesite server          # Build and start server
+```bash
+bundle exec middleman server
+bundle exec middleman build
 ```
 
 ## License
