@@ -1,0 +1,11 @@
+<a name="2.0.0"></a>
+## 2.0.0 (2018-05-20)
+
+
+#### Features
+
+*   add CHANGELOG ([3b5c253c](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/3b5c253c67b7daf958bb2605abee77065b6a8cc5))
+*   update to middleman 4 ([6db0693e](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/6db0693ec3fcc756b96d35a1d252ec1fa7deae51))
+
+
+
