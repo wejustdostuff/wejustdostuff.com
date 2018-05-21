@@ -1,3 +1,13 @@
+<a name="2.0.3"></a>
+### 2.0.3 (2018-05-21)
+
+
+#### Bug Fixes
+
+*   fix analytics id ([71c70724](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/71c70724ee1c760cdb7d56e686806ade70367f4d))
+
+
+
 <a name="2.0.2"></a>
 ### 2.0.2 (2018-05-21)
 
