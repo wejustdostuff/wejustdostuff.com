@@ -54,6 +54,7 @@ set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
 set :fonts_dir, 'assets/fonts'
 set :url_root, @app.data.site.url
+set :relative_links, true
 
 sprockets.append_path File.join "#{root}", "bower_components"
 
@@ -74,7 +75,7 @@ configure :build do
   activate :cache_buster
   activate :minify_javascript
   # favicon
-  activate :favicon_maker do |f| 
+  activate :favicon_maker do |f|
     f.template_dir = "source/assets/img"
     f.icons = {
       "favicon.png" => [
@@ -107,4 +108,8 @@ end
 
 configure :development do
 	activate :livereload
+end
+
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = 'git@github.com:wejustdostuff/wejustdostuff.com.git'
 end
