@@ -22,11 +22,5 @@ bundle exec middleman server
 bundle exec middleman build --clean
 ```
 
-## Deploy
-
-```bash
-bundle exec middleman gh-pages
-```
-
 ## License
 Copyright (c) We Just Do Stuff.
