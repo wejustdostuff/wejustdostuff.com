@@ -109,8 +109,6 @@ configure :development do
 	activate :livereload
 end
 
-activate :deploy do |deploy|
-  activate :gh_pages do |gh_pages|
-    gh_pages.remote = 'git@github.com:wejustdostuff/wejustdostuff.com.git'
-  end
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = 'git@github.com:wejustdostuff/wejustdostuff.com.git'
 end

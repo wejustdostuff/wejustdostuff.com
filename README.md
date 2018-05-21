@@ -10,18 +10,22 @@ To build, run and deploy this project you need the following tools:
 * [Bundler](https://bundler.io/)
 * [Middleman](http://middlemanapp.com)
 
-
 ## Development
 
 ```bash
 bundle exec middleman server
 ```
 
-## Deploy
+## Build
 
 ```bash
 bundle exec middleman build --clean
-bundle exec middleman deploy
+```
+
+## Deploy
+
+```bash
+bundle exec middleman gh-pages
 ```
 
 ## License
