@@ -23,4 +23,5 @@ bundle exec middleman build --clean
 ```
 
 ## License
+
 Copyright (c) We Just Do Stuff.
