@@ -4,7 +4,7 @@
 
 #### Bug Fixes
 
-*   fix analytics id ([71c70724](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/71c70724ee1c760cdb7d56e686806ade70367f4d))
+*   fix analytics id ([71c70724](https://github.com/wejustdostuff/wejustdostuff.com/commit/71c70724ee1c760cdb7d56e686806ade70367f4d))
 
 
 
@@ -20,7 +20,7 @@
 
 #### Features
 
-*   add html proofer test ([de0549f5](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/de0549f5100088be55a5af2870f3988db57dc026))
+*   add html proofer test ([de0549f5](https://github.com/wejustdostuff/wejustdostuff.com/commit/de0549f5100088be55a5af2870f3988db57dc026))
 
 
 
@@ -30,8 +30,8 @@
 
 #### Features
 
-*   add CHANGELOG ([3b5c253c](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/3b5c253c67b7daf958bb2605abee77065b6a8cc5))
-*   update to middleman 4 ([6db0693e](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/6db0693ec3fcc756b96d35a1d252ec1fa7deae51))
+*   add CHANGELOG ([3b5c253c](https://github.com/wejustdostuff/wejustdostuff.com/commit/3b5c253c67b7daf958bb2605abee77065b6a8cc5))
+*   update to middleman 4 ([6db0693e](https://github.com/wejustdostuff/wejustdostuff.com/commit/6db0693ec3fcc756b96d35a1d252ec1fa7deae51))
 
 
 
