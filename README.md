@@ -1,4 +1,4 @@
-# middleman-site-wejustdostuff
+# We Just Do Stuff
 
 > The www.wejustdostuff.com website powered by Middleman.
 
