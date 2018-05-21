@@ -110,12 +110,7 @@ configure :development do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
-  # deploy.build_before = true
-  committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
-  commit_message = "Deployed using #{committer_app}"
-  if ENV["TRAVIS_BUILD_NUMBER"] then
-    commit_message += " (Travis Build \##{ENV["TRAVIS_BUILD_NUMBER"]})"
+  activate :gh_pages do |gh_pages|
+    gh_pages.remote = 'git@github.com:wejustdostuff/wejustdostuff.com.git'
   end
-  deploy.commit_message = commit_message
 end
