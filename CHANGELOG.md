@@ -1,3 +1,13 @@
+<a name="2.0.1"></a>
+### 2.0.1 (2018-05-21)
+
+
+#### Features
+
+*   add html proofer test ([de0549f5](https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff/commit/de0549f5100088be55a5af2870f3988db57dc026))
+
+
+
 <a name="2.0.0"></a>
 ## 2.0.0 (2018-05-20)
 
