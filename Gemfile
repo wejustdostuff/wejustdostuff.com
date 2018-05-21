@@ -16,3 +16,6 @@ gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-ima
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
+
+# Added at 2018-05-21 14:39:04 +0200 by franklin:
+gem "html-proofer", "~> 3.9"
