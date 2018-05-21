@@ -11,7 +11,7 @@ end
 
 activate :google_analytics do |ga|
   ga.anonymize_ip = true
-  ga.tracking_id = data.site.ga_account
+  ga.tracking_id = @app.data.site.ga_account
 end
 
 # Layouts
