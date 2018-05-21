@@ -111,7 +111,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.build_before = true
+  # deploy.build_before = true
   committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
   commit_message = "Deployed using #{committer_app}"
   if ENV["TRAVIS_BUILD_NUMBER"] then
