@@ -54,7 +54,6 @@ set :css_dir, 'assets/css'
 set :images_dir, 'assets/img'
 set :fonts_dir, 'assets/fonts'
 set :url_root, @app.data.site.url
-set :relative_links, true
 
 sprockets.append_path File.join "#{root}", "bower_components"
 
