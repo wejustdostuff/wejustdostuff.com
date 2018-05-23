@@ -1,4 +1,5 @@
 # We Just Do Stuff
+[![Build Status](https://travis-ci.org/wejustdostuff/wejustdostuff.com.svg?branch=master)](https://travis-ci.org/wejustdostuff/wejustdostuff.com)
 
 > The www.wejustdostuff.com website powered by Middleman.
 
