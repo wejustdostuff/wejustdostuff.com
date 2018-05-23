@@ -1,3 +1,13 @@
+<a name="2.1.0"></a>
+## 2.1.0 (2018-05-23)
+
+
+#### Features
+
+*   remove depricated mailchimp ([61ce1734](https://github.com/wejustdostuff/wejustdostuff.com/commit/61ce17345287e9105ecd28542b3e500bb9dd2e7e))
+
+
+
 <a name="2.0.4"></a>
 ### 2.0.4 (2018-05-21)
 
